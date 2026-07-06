@@ -38,7 +38,7 @@ jobs:
         working-directory: ${{ inputs.working-directory }}
     env:
       LANG: C.UTF-8
-      CFL_EDU_ORG_ID: 2088731
+      CFL_EDU_ORG_ID: 289683916
     steps:
       - name: 🌐 Set up JavaScript ${{ inputs.node-version }} Environment
         uses: codeforlife-education/codeforlife-workspace/.github/actions/javascript/setup-environment@main

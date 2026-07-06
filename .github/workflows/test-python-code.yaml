@@ -68,7 +68,7 @@ jobs:
     env:
       LANG: C.UTF-8
       SOURCE: ${{ inputs.source-path }}
-      CFL_EDU_ORG_ID: 2088731
+      CFL_EDU_ORG_ID: 289683916
       DB_NAME: ${{ inputs.postgres-db }}
       DB_HOST: localhost
       DB_USER: ${{ inputs.postgres-user }}
