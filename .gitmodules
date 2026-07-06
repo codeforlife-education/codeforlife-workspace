@@ -1,45 +1,45 @@
 [submodule "codeforlife-contributor-frontend"]
 	path = frontend/contributor
-	url = https://github.com/ocadotechnology/codeforlife-contributor-frontend.git
+	url = https://github.com/codeforlife-education/codeforlife-contributor-frontend.git
 [submodule "codeforlife-contributor-backend"]
 	path = backend/contributor
-	url = https://github.com/ocadotechnology/codeforlife-contributor-backend.git
+	url = https://github.com/codeforlife-education/codeforlife-contributor-backend.git
 [submodule "codeforlife-portal-frontend"]
 	path = frontend/portal
-	url = https://github.com/ocadotechnology/codeforlife-portal-frontend.git
+	url = https://github.com/codeforlife-education/codeforlife-portal-frontend.git
 [submodule "codeforlife-portal-backend"]
 	path = backend/portal
-	url = https://github.com/ocadotechnology/codeforlife-portal-backend.git
+	url = https://github.com/codeforlife-education/codeforlife-portal-backend.git
 [submodule "codeforlife-rapid-router-frontend"]
 	path = frontend/rapid-router
-	url = https://github.com/ocadotechnology/codeforlife-rapid-router-frontend.git
+	url = https://github.com/codeforlife-education/codeforlife-rapid-router-frontend.git
 [submodule "codeforlife-rapid-router-backend"]
 	path = backend/rapid-router
-	url = https://github.com/ocadotechnology/codeforlife-rapid-router-backend.git
+	url = https://github.com/codeforlife-education/codeforlife-rapid-router-backend.git
 [submodule "codeforlife-sso-frontend"]
 	path = frontend/sso
-	url = https://github.com/ocadotechnology/codeforlife-sso-frontend.git
+	url = https://github.com/codeforlife-education/codeforlife-sso-frontend.git
 [submodule "codeforlife-sso-backend"]
 	path = backend/sso
-	url = https://github.com/ocadotechnology/codeforlife-sso-backend.git
+	url = https://github.com/codeforlife-education/codeforlife-sso-backend.git
 [submodule "codeforlife-template-frontend"]
 	path = frontend/template
-	url = https://github.com/ocadotechnology/codeforlife-template-frontend.git
+	url = https://github.com/codeforlife-education/codeforlife-template-frontend.git
 [submodule "codeforlife-template-backend"]
 	path = backend/template
-	url = https://github.com/ocadotechnology/codeforlife-template-backend.git
+	url = https://github.com/codeforlife-education/codeforlife-template-backend.git
 [submodule "codeforlife-package-python"]
 	path = backend/package
-	url = https://github.com/ocadotechnology/codeforlife-package-python.git
+	url = https://github.com/codeforlife-education/codeforlife-package-python.git
 [submodule "codeforlife-package-javascript"]
 	path = frontend/package
-	url = https://github.com/ocadotechnology/codeforlife-package-javascript.git
+	url = https://github.com/codeforlife-education/codeforlife-package-javascript.git
 [submodule "codeforlife-portal"]
 	path = legacy/portal
-	url = https://github.com/ocadotechnology/codeforlife-portal.git
+	url = https://github.com/codeforlife-education/codeforlife-portal.git
 [submodule "codeforlife-deploy-appengine"]
 	path = legacy/deploy-appengine
-	url = https://github.com/ocadotechnology/codeforlife-deploy-appengine.git
+	url = https://github.com/codeforlife-education/codeforlife-deploy-appengine.git
 [submodule "rapid-router"]
 	path = legacy/rapid-router
-	url = https://github.com/ocadotechnology/rapid-router.git
+	url = https://github.com/codeforlife-education/rapid-router.git
