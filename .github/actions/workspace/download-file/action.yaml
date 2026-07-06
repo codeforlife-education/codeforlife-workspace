@@ -34,7 +34,7 @@ runs:
 
     - name: 📥 Download File
       shell: bash
-      run: wget https://raw.githubusercontent.com/ocadotechnology/codeforlife-workspace/refs/heads/${{ inputs.branch }}/${{ inputs.path }} -O ${{ steps.get-output-path.outputs.value }}
+      run: wget https://raw.githubusercontent.com/codeforlife-education/codeforlife-workspace/refs/heads/${{ inputs.branch }}/${{ inputs.path }} -O ${{ steps.get-output-path.outputs.value }}
 
     - name: ⚙️ Make Script Executable
       if: inputs.type == 'bash'

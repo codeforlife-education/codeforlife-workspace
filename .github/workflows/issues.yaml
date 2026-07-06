@@ -24,7 +24,7 @@ on:
 
 env:
   REPO_NAME: ${{ github.event.repository.name }}
-  WORKFLOW_REF: ocadotechnology/codeforlife-workspace/.github/workflows/issues.yaml@refs/heads/main
+  WORKFLOW_REF: codeforlife-education/codeforlife-workspace/.github/workflows/issues.yaml@refs/heads/main
 
 jobs:
   body:
@@ -50,13 +50,13 @@ jobs:
       ISSUE_NUMBER: "${{ github.event.issue.number }}"
     steps:
       - name: 🤖 Set up CFL bot
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/bot/setup@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/bot/setup@main
         id: setup-bot
         with:
           cfl-app-private-key: ${{ secrets.CFL_APP_PRIVATE_KEY }}
 
       - name: 🏃 Download and Run Job Script
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/run-job-script@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/run-job-script@main
         env:
           GH_TOKEN: ${{ steps.setup-bot.outputs.token }}
         with:
@@ -86,13 +86,13 @@ jobs:
       ISSUE_HAS_COMMENTER_ASSIGNED: "${{ contains(github.event.issue.assignees.*.id, github.event.comment.user.id) }}"
     steps:
       - name: 🤖 Set up CFL bot
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/bot/setup@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/bot/setup@main
         id: setup-bot
         with:
           cfl-app-private-key: ${{ secrets.CFL_APP_PRIVATE_KEY }}
 
       - name: 🏃 Download and Run Job Script
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/run-job-script@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/run-job-script@main
         env:
           GH_TOKEN: ${{ steps.setup-bot.outputs.token }}
         with:
@@ -113,13 +113,13 @@ jobs:
       REPO_NAME: ${{ github.event.repository.name }}
     steps:
       - name: 🤖 Set up CFL bot
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/bot/setup@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/bot/setup@main
         id: setup-bot
         with:
           cfl-app-private-key: ${{ secrets.CFL_APP_PRIVATE_KEY }}
 
       - name: 🏃 Download and Run Job Script
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/run-job-script@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/run-job-script@main
         env:
           GH_TOKEN: ${{ steps.setup-bot.outputs.token }}
         with:

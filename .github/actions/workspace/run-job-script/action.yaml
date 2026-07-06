@@ -18,7 +18,7 @@ runs:
   steps:
     - uses: actions/checkout@v5
       with:
-        repository: ocadotechnology/codeforlife-workspace
+        repository: codeforlife-education/codeforlife-workspace
 
     - shell: bash
       run: .scripts/__main__ run_workflow_job_script "${{ inputs.workflow }} ${{ inputs.job }} ${{ inputs.args }}"

@@ -33,7 +33,7 @@ runs:
   steps:
     - name: 📥 Download .gitmodules
       if: inputs.download == 'true'
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/download-file@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/download-file@main
       with:
         branch: ${{ inputs.download-branch }}
         path: .gitmodules

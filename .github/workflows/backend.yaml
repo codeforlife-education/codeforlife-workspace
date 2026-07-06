@@ -39,14 +39,14 @@ on:
 
 jobs:
   issue:
-    uses: ocadotechnology/codeforlife-workspace/.github/workflows/issues.yaml@main
+    uses: codeforlife-education/codeforlife-workspace/.github/workflows/issues.yaml@main
     secrets: inherit
 
   contributor:
-    uses: ocadotechnology/codeforlife-contributor-backend/.github/workflows/check-pr-authors-signed-latest-agreement.yaml@main
+    uses: codeforlife-education/codeforlife-contributor-backend/.github/workflows/check-pr-authors-signed-latest-agreement.yaml@main
 
   test:
-    uses: ocadotechnology/codeforlife-workspace/.github/workflows/test-python-code.yaml@main
+    uses: codeforlife-education/codeforlife-workspace/.github/workflows/test-python-code.yaml@main
     secrets: inherit
     with:
       source-path: src
@@ -67,7 +67,7 @@ jobs:
       github.ref_name == github.event.repository.default_branch
     steps:
       - name: 🐍 Set up Python ${{ inputs.python-version }} Environment
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/python/setup-environment@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/python/setup-environment@main
         with:
           python-version: ${{ inputs.python-version }}
 
@@ -78,7 +78,7 @@ jobs:
         run: pipenv run python ./manage.py collectstatic --noinput --clear
 
       - name: 📤 Upload Build Artifact
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/service/upload-build-artifact@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/service/upload-build-artifact@main
         with:
           path: |
             requirements.txt
@@ -92,13 +92,13 @@ jobs:
       DEPLOY_ARTIFACT_PATH: ".deploy"
     steps:
       - name: 🤖 Set up CFL bot
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/bot/setup@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/bot/setup@main
         id: setup-bot
         with:
           cfl-app-private-key: ${{ secrets.CFL_APP_PRIVATE_KEY }}
 
       - name: 🛫 Set up Release
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/service/setup-release@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/service/setup-release@main
         with:
           cfl-bot-gh-token: ${{ steps.setup-bot.outputs.token }}
 
@@ -112,19 +112,19 @@ jobs:
         run: zip --quiet --recurse-paths ../static.zip .
 
       - name: 🚀 Publish Semantic Release
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/service/release@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/service/release@main
         with:
           cfl-bot-gh-token: ${{ steps.setup-bot.outputs.token }}
           rc-path: backend/.releaserc.json
 
   monitor:
-    uses: ocadotechnology/codeforlife-workspace/.github/workflows/monitor-python-release.yaml@main
+    uses: codeforlife-education/codeforlife-workspace/.github/workflows/monitor-python-release.yaml@main
     secrets: inherit
     needs: [release]
     with:
       python-version: ${{ inputs.python-version }}
 
   submodule:
-    uses: ocadotechnology/codeforlife-workspace/.github/workflows/gitmodules.yaml@main
+    uses: codeforlife-education/codeforlife-workspace/.github/workflows/gitmodules.yaml@main
     secrets: inherit
     needs: [release]

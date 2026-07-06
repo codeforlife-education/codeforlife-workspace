@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: ☁️ Setup GCloud
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/gcloud/setup@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/gcloud/setup@main
 
       - name: 🚀 Deploy CRON Jobs on GCloud
         run: gcloud app deploy legacy/cron.yaml

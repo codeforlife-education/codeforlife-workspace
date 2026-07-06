@@ -39,7 +39,7 @@ runs:
       uses: actions/checkout@v5
       if: inputs.workspace == 'true'
       with:
-        repository: ocadotechnology/codeforlife-workspace
+        repository: codeforlife-education/codeforlife-workspace
         path: .workspace
         submodules: false
         ref: ${{ inputs.workspace-ref }}

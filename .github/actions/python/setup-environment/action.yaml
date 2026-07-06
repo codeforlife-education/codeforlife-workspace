@@ -21,7 +21,7 @@ runs:
   steps:
     - name: 🛫 Checkout
       if: inputs.checkout == 'true'
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/checkout-submodule-and-workspace@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/checkout-submodule-and-workspace@main
       with:
         workspace-ref: ${{ inputs.workspace-ref }}
 

@@ -11,13 +11,13 @@ runs:
   using: composite
   steps:
     - name: 📥 Download Release Candidate Configuration
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/download-file@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/download-file@main
       with:
         path: ${{ inputs.rc-path }}
         save-to: .releaserc.json
 
     - name: 🚀 Publish Semantic Release
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/github/release@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/github/release@main
       with:
         cfl-bot-gh-token: ${{ inputs.cfl-bot-gh-token }}
         checkout: false

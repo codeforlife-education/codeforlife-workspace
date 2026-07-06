@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: 🤖 Set up CFL bot
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/bot/setup@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/bot/setup@main
         id: setup-bot
         with:
           cfl-app-private-key: ${{ secrets.CFL_APP_PRIVATE_KEY }}
@@ -32,4 +32,4 @@ jobs:
       - name: 🏃 Download and Run Job Script
         env:
           GH_TOKEN: ${{ steps.setup-bot.outputs.token }}
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/run-job-script@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/run-job-script@main

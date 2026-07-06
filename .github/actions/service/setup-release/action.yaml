@@ -16,7 +16,7 @@ runs:
   using: composite
   steps:
     - name: 🛫 Checkout
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/checkout-submodule-and-workspace@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/checkout-submodule-and-workspace@main
       with:
         token: ${{ inputs.cfl-bot-gh-token }}
         fetch-depth: 0

@@ -27,13 +27,13 @@ runs:
   using: composite
   steps:
     - name: 📥 Download Snyk CLI and Config File
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/snyk/download-cli-and-config-file@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/snyk/download-cli-and-config-file@main
       with:
         config-path: ${{ inputs.config-path }}
 
     - name: 🗂️ Get Repo's Name
       id: get-repo-name
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/github/get-repo-name@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/github/get-repo-name@main
       with:
         remove-prefix: ${{ inputs.remove-repo-name-prefix }}
 

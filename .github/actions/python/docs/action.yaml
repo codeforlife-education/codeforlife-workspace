@@ -17,7 +17,7 @@ runs:
   using: composite
   steps:
     - name: 🛫 Checkout
-      uses: ocadotechnology/codeforlife-workspace/.github/actions/workspace/checkout-submodule-and-workspace@main
+      uses: codeforlife-education/codeforlife-workspace/.github/actions/workspace/checkout-submodule-and-workspace@main
 
     - name: 🐍 Set up Python ${{ inputs.python-version }}
       uses: actions/setup-python@v5
@@ -43,7 +43,7 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       run: pipenv run python manage.py graph_models
 
-    - uses: ocadotechnology/codeforlife-workspace/.github/actions/git/add-commit-push@main
+    - uses: codeforlife-education/codeforlife-workspace/.github/actions/git/add-commit-push@main
       if: inputs.graph-django-models == 'true'
       with:
         add: docs/entity_relationship_diagram.png

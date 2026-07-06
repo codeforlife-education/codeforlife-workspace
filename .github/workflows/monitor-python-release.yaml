@@ -31,18 +31,18 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: 🤖 Set up CFL bot
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/bot/setup@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/bot/setup@main
         id: setup-bot
         with:
           cfl-app-private-key: ${{ secrets.CFL_APP_PRIVATE_KEY }}
 
       - name: 🐍 Set up Python ${{ inputs.python-version }} Environment
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/python/setup-environment@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/python/setup-environment@main
         with:
           python-version: ${{ inputs.python-version }}
 
       - name: 🔎 Monitor Open-Source Vulnerabilities and License Issues
-        uses: ocadotechnology/codeforlife-workspace/.github/actions/snyk/monitor-release@main
+        uses: codeforlife-education/codeforlife-workspace/.github/actions/snyk/monitor-release@main
         with:
           gh-token: ${{ steps.setup-bot.outputs.token }}
           snyk-token: ${{ secrets.SNYK_TOKEN }}
