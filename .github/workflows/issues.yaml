@@ -30,7 +30,7 @@ jobs:
   body:
     runs-on: ubuntu-22.04
     if: |
-      github.repository_owner_id == 2088731 && (
+      github.repository_owner_id == env.CFL_EDU_ORG_ID && (
         (
           github.repository_id == 610732754 && (
             github.event_name == 'schedule' || (
@@ -66,7 +66,7 @@ jobs:
   prompt:
     runs-on: ubuntu-22.04
     if: |
-      github.repository_owner_id == 2088731 &&
+      github.repository_owner_id == env.CFL_EDU_ORG_ID &&
       github.event_name == 'issue_comment' &&
       !github.event.issue.pull_request &&
       contains(fromJSON('["created", "edited"]'), github.event.action) &&
@@ -102,7 +102,7 @@ jobs:
   inactive:
     runs-on: ubuntu-22.04
     if: |
-      github.repository_owner_id == 2088731 &&
+      github.repository_owner_id == env.CFL_EDU_ORG_ID &&
       github.repository_id == 610732754 && (
         github.event_name == 'schedule' || (
           github.event_name == 'workflow_dispatch' &&
