@@ -68,7 +68,6 @@ jobs:
     env:
       LANG: C.UTF-8
       SOURCE: ${{ inputs.source-path }}
-      CFL_EDU_ORG_ID: 289683916
       DB_NAME: ${{ inputs.postgres-db }}
       DB_HOST: localhost
       DB_USER: ${{ inputs.postgres-user }}
@@ -145,7 +144,7 @@ jobs:
 
       - name: 📈 Upload Coverage Reports to Codecov
         if: >-
-          github.repository_owner_id == env.CFL_EDU_ORG_ID &&
+          github.repository_owner_id == vars.CFL_EDU_ORG_ID &&
           steps.test-code.outcome == 'success'
         uses: codeforlife-education/codeforlife-workspace/.github/actions/codecov/upload-report@main
         with:
@@ -155,7 +154,7 @@ jobs:
       - name: 🐶 Run Snyk Tests
         id: check-packages
         continue-on-error: true
-        if: github.repository_owner_id == env.CFL_EDU_ORG_ID
+        if: github.repository_owner_id == vars.CFL_EDU_ORG_ID
         uses: codeforlife-education/codeforlife-workspace/.github/actions/snyk/run-tests@main
         with:
           snyk-token: ${{ secrets.SNYK_TOKEN }}

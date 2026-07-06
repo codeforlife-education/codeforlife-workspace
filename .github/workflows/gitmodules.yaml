@@ -21,11 +21,11 @@ jobs:
   sync:
     runs-on: ubuntu-22.04
     # Sync if:
-    #  - the repo's owner is Ocado Tech.
+    #  - the repo's owner is Code for Life Education.
     #  - the repo 'codeforlife-workspace' triggered the event OR the event was
     #    triggered by the repo's default branch.
     if: |
-      github.repository_owner_id == 2088731 && (
+      github.repository_owner_id == vars.CFL_EDU_ORG_ID && (
         github.event.repository.name == 'codeforlife-workspace' ||
         github.event.repository.default_branch == github.ref_name
       )

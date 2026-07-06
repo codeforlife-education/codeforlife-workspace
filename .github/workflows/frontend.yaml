@@ -44,11 +44,11 @@ jobs:
     runs-on: ubuntu-22.04
     needs: [test]
     # Build if:
-    #  - the repo's owner is Ocado Tech.
+    #  - the repo's owner is Code for Life Education.
     #  - the repo is not the frontend template.
     #  - a change is made to the default branch.
     if: |
-      github.repository_owner_id == 2088731 &&
+      github.repository_owner_id == vars.CFL_EDU_ORG_ID &&
       github.repository_id != 841979065 &&
       github.ref_name == github.event.repository.default_branch
     steps:
