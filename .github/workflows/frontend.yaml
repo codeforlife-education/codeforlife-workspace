@@ -31,6 +31,8 @@ jobs:
 
   contributor:
     uses: codeforlife-education/codeforlife-contributor-backend/.github/workflows/check-pr-authors-signed-latest-agreement.yaml@main
+    permissions:
+      id-token: write
 
   test:
     uses: codeforlife-education/codeforlife-workspace/.github/workflows/test-javascript-code.yaml@main
