@@ -227,7 +227,7 @@ function test:coverage:check() {
 }
 
 function test:coverage() {
-  if github_repo_owner_is_ocado_tech; then
+  if github_repo_owner_is_cfl; then
     test:coverage:report $@
   else
     test:coverage:check $@

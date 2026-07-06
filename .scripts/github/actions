@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# The ID of the Ocado Technology GitHub organization.
-# https://github.com/ocadotechnology
-ocado_tech_org_id=${OCADO_TECH_ORG_ID:-2088731}
+# The ID of the Code for Life Education GitHub organization.
+# https://github.com/codeforlife-education
+cfl_edu_org_id=${CFL_EDU_ORG_ID:-289683916}
 
-function github_repo_owner_is_ocado_tech() {
-  if [ "$GITHUB_REPOSITORY_OWNER_ID" -eq $ocado_tech_org_id ]; then
+function github_repo_owner_is_cfl() {
+  if [ "$GITHUB_REPOSITORY_OWNER_ID" -eq $cfl_edu_org_id ]; then
     return 0
   else
     return 1
