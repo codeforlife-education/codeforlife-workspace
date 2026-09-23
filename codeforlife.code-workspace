@@ -271,6 +271,18 @@
     "[graphql]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     // Handlebars
     "[handlebars]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    // AI chats
+    "chat.tools.terminal.autoApprove": {
+      "npx tsc": true,
+      "npx eslint": true,
+      "npx prettier": true,
+      "yarn tsc": true,
+      "yarn run eslint": true,
+      "yarn prettier": true,
+      "/workspace/frontend/scripts": true,
+      "node_modules/.bin/tsc": true,
+      "node_modules/.bin/eslint": true,
+    },
   },
   "tasks": {
     "version": "2.0.0",

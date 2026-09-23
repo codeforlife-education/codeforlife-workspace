@@ -11,7 +11,6 @@
         // "snyk-security.snyk-vulnerability-scanner", TODO: investigate how to work with contributors
         // "codecov.codecov", TODO: investigate how to stop spamming popups
         "ritwickdey.liveserver",
-        "rangav.vscode-thunder-client",
         "jock.svg",
         "tyriar.luna-paint",
         "dotenv.dotenv-vscode",
